@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Biografía</title>
+
+<!-- TIPOGRAFÍAS -->
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    font-family:'Libre Baskerville', serif;
+    background:#eef6fb;
+    color:#2f2f2f;
+}
+
+/* HEADER */
+header{
+    background:white;
+    padding:25px;
+    border-bottom:4px solid #d4af37;
+}
+
+.header-top{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    max-width:1000px;
+    margin:auto;
+}
+
+/* DIV DE LA PALOMA */
+.header-img{
+    border:3px solid #d4af37;
+    border-radius:12px;
+    background:#d9f0ff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:6px;
+}
+
+/* PALOMA AJUSTADA */
+.header-img img{
+    max-width:70px;
+    max-height:70px;
+    width:auto;
+    height:auto;
+    object-fit:contain;
+    display:block;
+}
+
+.header-text{
+    flex:1;
+    font-size:26px;
+    font-family:'DM Serif Display', serif;
+}
+
+/* BOTONES PAZ */
+.header-buttons{
+    margin-top:20px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+
+.header-buttons button{
+    width:64px;
+    height:64px;
+    border-radius:50%;
+    border:3px solid #d4af37;
+    background:#6ec1e4;
+    color:white;
+    font-size:26px;
+    font-family:'Pacifico', cursive;
+    cursor:pointer;
+    box-shadow:0 6px 16px rgba(0,0,0,0.2);
+    transition:all 0.25s ease;
+}
+
+.header-buttons button:hover{
+    transform:translateY(-3px);
+    background:#f5e6b8;
+    color:#4a4a4a;
+}
+
+/* SECCIÓN HORIZONTAL */
+.section-middle{
+    max-width:1000px;
+    margin:40px auto;
+    background:white;
+    border-radius:20px;
+    border:3px solid #d4af37;
+    padding:26px;
+    display:flex;
+    gap:20px;
+    align-items:center;
+    box-shadow:0 10px 24px rgba(0,0,0,0.15);
+}
+
+.img-box{
+    width:140px;
+    height:100px;
+    border-radius:15px;
+    border:3px solid #d4af37;
+    background:#d9f0ff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+}
+
+/* TODAS LAS IMÁGENES */
+.img-box img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    display:block;
+}
+
+.section-middle .text{
+    flex:1;
+    font-size:16px;
+    line-height:1.8;
+}
+
+/* SECCIÓN INFERIOR */
+.section-bottom{
+    max-width:1000px;
+    margin:40px auto;
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:20px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    border:3px solid #d4af37;
+    padding:22px;
+    font-size:15.5px;
+    line-height:1.75;
+    box-shadow:0 8px 20px rgba(0,0,0,0.12);
+}
+
+.card .img-box{
+    margin-top:18px;
+}
+
+/* VIDEO GRANDE */
+.img-big{
+    width:100%;
+    height:260px;
+    border-radius:20px;
+    border:3px solid #d4af37;
+    background:#d9f0ff;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* VIDEO AJUSTADO */
+.img-big video{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-top">
+        <div class="header-img">
+            <img src="pngtree-dove-of-peace-cartoon-clipart-png-image_8160832.png" alt="paloma">
+        </div>
+        <div class="header-text">
+            Biografía del Papa Francisco
+        </div>
+    </div>
+
+    <div class="header-buttons">
+        <button onclick="ir('index.html')">P</button>
+        <button onclick="ir('logros.html')">A</button>
+        <button onclick="ir('Biografia.html')">Z</button>
+    </div>
+</header>
+
+<div class="section-middle">
+    <div class="img-box">
+        <img src="joven.jpg" alt="joven1">
+    </div>
+    <div class="text">
+        <p>
+El papa Francisco nace en Buenos Aires, Argentina, en una familia sencilla de origen inmigrante. Crece en un ambiente de valores fuertes, donde aprende la importancia del respeto, el esfuerzo y la solidaridad. Desde joven convive con personas de distintas realidades, lo que lo ayuda a desarrollar una mirada cercana y comprensiva hacia los demás. Vive una vida simple y conoce de cerca las alegrías y dificultades de la gente común.
+        </p>
+    </div>
+    <div class="img-box">
+        <img src="joven.jpg" alt="joven2">
+    </div>
+</div>
+
+<div class="section-bottom">
+
+    <div class="card">
+        <p>
+Con el paso del tiempo, el papa Francisco siente un llamado interior a dedicar su vida al servicio de Dios y de las personas. Decide ingresar a la Compañía de Jesús, donde se forma como sacerdote jesuita.
+        </p>
+        <div class="img-box">
+            <img src="Portrait_of_Pope_Francis_(2021)_FXD_(removed_figure).jpg" alt="1">
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="img-big">
+            <video autoplay muted loop>
+                <source src="Untitled video - Made with Clipchamp (3).mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <div class="card">
+        <p>
+A lo largo de su camino, asume importantes responsabilidades dentro de la Iglesia. Se desempeña como obispo y luego como arzobispo de Buenos Aires, manteniendo un estilo de vida humilde y cercano.
+        </p>
+        <div class="img-box">
+            <img src="Portrait_of_Pope_Francis_(2021)_FXD_(removed_figure).jpg" alt="2">
+        </div>
+    </div>
+
+</div>
+
+<div class="section-middle">
+    <div class="img-box">
+        <img src="1.jpg" alt="3">
+    </div>
+    <div class="text">
+        <p>
+Al ser elegido papa, toma el nombre de Francisco, inspirado en San Francisco de Asís.
+        </p>
+        <p>
+Hoy, el papa Francisco continúa trabajando por un mundo más justo y solidario, promoviendo la paz y el respeto.
+        </p>
+    </div>
+    <div class="img-box">
+        <img src="2.jpg" alt="4">
+    </div>
+</div>
+
+<script>
+function ir(p){
+    window.location.href = p;
+}
+</script>
+
+</body>
+</html>
+
