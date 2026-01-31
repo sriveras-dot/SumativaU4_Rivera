@@ -4,121 +4,145 @@
 <meta charset="UTF-8">
 <title>Papa Francisco</title>
 
-<!-- Tipografías -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+<!-- TIPOGRAFÍAS MODERNAS -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
 <style>
+*{
+    box-sizing:border-box;
+}
+
 body{
     margin:0;
-    font-family:Arial, sans-serif;
-    background-color:#eef6fb;
+    font-family:'Inter', sans-serif;
+    background:#eef6fb;
+    color:#2f2f2f;
 }
 
 /* HEADER */
 header{
     background:linear-gradient(to right,#d9f0ff,#ffffff);
-    padding:25px;
+    padding:35px;
     text-align:center;
     border-bottom:4px solid #d4af37;
+    box-shadow:0 6px 18px rgba(0,0,0,0.08);
 }
 
 .titulo{
-    font-family:'Playfair Display',serif;
-    font-size:42px;
+    font-family:'Playfair Display', serif;
+    font-size:48px;
     color:#4a90c2;
+    letter-spacing:1.2px;
 }
 
 /* IMAGEN SUPERIOR */
 .imagen-superior{
-    text-align:center;
-    margin:30px 0;
+    display:flex;
+    justify-content:center;
+    margin:40px 0;
 }
 
-.imagen-superior video,
-.imagen-superior img{
-    width:70%;
-    max-width:500px;
-    height:280px;
+.imagen-superior video{
+    width:72%;
+    max-width:540px;
+    height:300px;
     object-fit:cover;
-    border-radius:15px;
+    border-radius:22px;
     border:3px solid #d4af37;
+    box-shadow:0 14px 28px rgba(0,0,0,0.15);
 }
 
 /* CONTENIDO */
 section{
-    padding:30px;
+    padding:20px 30px;
 }
 
 .contenedor{
     display:flex;
-    gap:20px;
+    gap:28px;
 }
 
+/* LATERALES */
 .lateral{
     width:20%;
-    background-color:#e3f2fd;
+    background:#e3f2fd;
     border:3px solid #d4af37;
-    border-radius:15px;
-    padding:10px;
+    border-radius:22px;
+    padding:12px;
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
+    box-shadow:0 10px 22px rgba(0,0,0,0.12);
 }
 
-.lateral video,
-.lateral img{
+.lateral video{
     width:100%;
-    height:200px;
+    height:220px;
     object-fit:cover;
-    border-radius:10px;
+    border-radius:16px;
 }
 
+/* TEXTO CENTRAL */
 .centro{
     width:60%;
     background:white;
-    padding:25px;
-    border-radius:15px;
+    padding:35px;
+    border-radius:26px;
     border:3px solid #d4af37;
-    line-height:1.6;
+    box-shadow:0 14px 30px rgba(0,0,0,0.18);
+    line-height:1.85;
+    font-size:17px;
 }
 
-/* PAZ ABAJO */
+.centro p{
+    margin-bottom:20px;
+}
+
+/* PAZ */
 .paz{
-    margin:50px 0;
+    margin:70px 0 50px;
     display:flex;
     justify-content:center;
-    gap:40px;
+    gap:50px;
 }
 
+/* ITEMS */
 .paz-item{
+    width:200px;
     text-align:center;
-    width:180px;
 }
 
 .paz-item video,
 .paz-item img{
     width:100%;
-    height:120px;
+    height:135px;
     object-fit:cover;
-    border-radius:15px;
+    border-radius:22px;
     border:3px solid #d4af37;
-    margin-bottom:10px;
+    box-shadow:0 10px 22px rgba(0,0,0,0.16);
+    margin-bottom:14px;
 }
 
+/* BOTONES */
 .paz-item button{
-    font-family:'Pacifico',cursive;
-    font-size:32px;
-    padding:10px 30px;
-    border-radius:30px;
+    font-family:'Pacifico', cursive;
+    font-size:36px;
+    padding:14px 38px;
+    border-radius:50px;
     border:3px solid #d4af37;
-    background-color:#6ec1e4;
+    background:linear-gradient(135deg,#6ec1e4,#4a90c2);
     color:white;
     cursor:pointer;
+    box-shadow:0 10px 24px rgba(0,0,0,0.25);
+    transition:all 0.25s ease;
 }
 
 .paz-item button:hover{
-    background-color:#f5e6b8;
+    transform:translateY(-4px) scale(1.03);
+    box-shadow:0 16px 30px rgba(0,0,0,0.35);
+    background:#f5e6b8;
     color:#4a4a4a;
 }
 </style>
@@ -130,7 +154,6 @@ section{
     <h1 class="titulo">Papa Francisco</h1>
 </header>
 
-<!-- IMAGEN SUPERIOR -->
 <div class="imagen-superior">
     <video autoplay muted loop>
         <source src="Video1 (1).mp4" type="video/mp4">
@@ -138,17 +161,14 @@ section{
 </div>
 
 <section>
-
     <div class="contenedor">
 
-        <!-- LATERAL IZQUIERDO -->
         <div class="lateral">
             <video autoplay muted loop>
                 <source src="Video4 (1).mp4" type="video/mp4">
             </video>
         </div>
 
-        <!-- TEXTO -->
         <div class="centro">
             <p>
 El papa Francisco cree en una Iglesia cercana a las personas, especialmente a quienes más lo necesitan. Su mensaje se basa en la humildad, la sencillez y el amor al prójimo. Promueve valores como la solidaridad, el respeto y la justicia, e invita a las personas a vivir con compasión y esperanza. También llama a cuidar el planeta, a construir la paz y a dialogar con quienes piensan diferente, buscando un mundo más justo y fraterno.
@@ -163,7 +183,6 @@ En esta página se ofrece una introducción general al papa Francisco y a los va
             </p>
         </div>
 
-        <!-- LATERAL DERECHO -->
         <div class="lateral">
             <video autoplay muted loop>
                 <source src="Video4 (1).mp4" type="video/mp4">
@@ -173,7 +192,6 @@ En esta página se ofrece una introducción general al papa Francisco y a los va
     </div>
 </section>
 
-<!-- PAZ -->
 <div class="paz">
 
     <div class="paz-item">
@@ -184,7 +202,7 @@ En esta página se ofrece una introducción general al papa Francisco y a los va
     </div>
 
     <div class="paz-item">
-        <img src="589209db7a3c-gettyimages-1288088474.avif" alt="Imagen A">
+        <img src="589209db7a3c-gettyimages-1288088474.avif">
         <button onclick="irAPagina('logros.html')">A</button>
     </div>
 
@@ -192,7 +210,7 @@ En esta página se ofrece una introducción general al papa Francisco y a los va
         <video autoplay muted loop>
             <source src="Video3 (1).mp4" type="video/mp4">
         </video>
-        <button onclick="irAPagina('logros.html')">Z</button>
+        <button onclick="irAPagina('Biografia.html')">Z</button>
     </div>
 
 </div>
@@ -205,3 +223,4 @@ function irAPagina(pagina){
 
 </body>
 </html>
+
