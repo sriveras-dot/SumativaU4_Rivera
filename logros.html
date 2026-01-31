@@ -4,13 +4,17 @@
 <meta charset="UTF-8">
 <title>Logros</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+<!-- TIPOGRAFÍAS -->
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
 <style>
 body{
     margin:0;
-    font-family:Arial, sans-serif;
+    font-family:'Libre Baskerville', serif;
     background-color:#eef6fb;
+    color:#2f2f2f;
 }
 
 /* NOMBRE DEL SITIO */
@@ -18,8 +22,8 @@ body{
     background:#ffffff;
     padding:15px;
     text-align:center;
-    font-family:'Playfair Display',serif;
-    font-size:30px;
+    font-family:'DM Serif Display', serif;
+    font-size:32px;
     color:#4a90c2;
     border-bottom:4px solid #d4af37;
 }
@@ -31,8 +35,8 @@ header{
 }
 
 .titulo{
-    font-family:'Playfair Display',serif;
-    font-size:42px;
+    font-family:'DM Serif Display', serif;
+    font-size:44px;
     color:#4a90c2;
 }
 
@@ -53,47 +57,78 @@ header{
 /* TARJETA */
 .tarjeta{
     background:white;
-    border-radius:20px;
+    border-radius:22px;
     border:3px solid #d4af37;
-    padding:20px;
+    padding:22px;
     cursor:pointer;
+    box-shadow:0 8px 20px rgba(0,0,0,0.12);
+    transition:transform 0.25s ease;
+}
+
+.tarjeta:hover{
+    transform:translateY(-4px);
 }
 
 /* IMAGEN */
 .imagen{
-    height:140px;
+    height:150px;
     border-radius:15px;
     border:3px solid #d4af37;
-    background-color:#d9f0ff;
+    background-color:#ffffff;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-weight:bold;
-    color:#4a90c2;
     margin-bottom:15px;
     overflow:hidden;
+    padding:6px; /* espacio para que no se pegue */
 }
 
-/* AJUSTE DE IMÁGENES */
 .imagen img{
     width:100%;
     height:100%;
-    object-fit:cover;
+    object-fit:contain; /* NO se cortan */
     border-radius:12px;
 }
 
 /* TEXTO */
 .texto{
-    font-size:17px;
-    line-height:1.6;
+    font-size:16px;
+    line-height:1.75;
     text-align:justify;
+}
+
+/* PAZ */
+.paz{
+    margin:60px 0 40px;
+    display:flex;
+    justify-content:center;
+    gap:30px;
+}
+
+.paz button{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    border:3px solid #d4af37;
+    background:#6ec1e4;
+    color:white;
+    font-size:28px;
+    font-family:'Pacifico', cursive;
+    cursor:pointer;
+    box-shadow:0 8px 18px rgba(0,0,0,0.25);
+    transition:all 0.25s ease;
+}
+
+.paz button:hover{
+    background:#f5e6b8;
+    color:#4a4a4a;
+    transform:translateY(-3px);
 }
 </style>
 </head>
 
 <body>
 
-<!-- NOMBRE DEL SITIO -->
 <div class="nombre-sitio">
     Logros
 </div>
@@ -106,10 +141,9 @@ header{
 
     <div class="grid">
 
-        <!-- ARRIBA IZQUIERDA: IMAGEN ARRIBA -->
         <div class="tarjeta">
             <div class="imagen">
-                <img src="jornada-mundial-paz-2022-papa-francisco20211222152333894973 (1).jpg" alt="1">
+                <img src="jornada-mundial-paz-2022-papa-francisco20211222152333894973 (1).jpg">
             </div>
             <div class="texto">
                 <p>
@@ -118,7 +152,6 @@ El papa Francisco trabaja cada día para que la Iglesia sea más cercana, humana
             </div>
         </div>
 
-        <!-- ARRIBA DERECHA: IMAGEN ABAJO -->
         <div class="tarjeta">
             <div class="texto">
                 <p>
@@ -126,14 +159,13 @@ Uno de sus logros más importantes es dar voz a los pobres y a los excluidos, re
                 </p>
             </div>
             <div class="imagen">
-                <img src="image (1).jpg" alt="2">
+                <img src="image (1).jpg">
             </div>
         </div>
 
-        <!-- ABAJO IZQUIERDA: IMAGEN ARRIBA -->
         <div class="tarjeta">
             <div class="imagen">
-                <img src="images (1).jpg" alt="3">
+                <img src="images (1).jpg">
             </div>
             <div class="texto">
                 <p>
@@ -142,10 +174,9 @@ También promueve el cuidado del planeta, enseñando que la naturaleza es la cas
             </div>
         </div>
 
-        <!-- ABAJO DERECHA: IMAGEN ARRIBA -->
         <div class="tarjeta">
             <div class="imagen">
-                <img src="download (1).jpg" alt="4">
+                <img src="download (1).jpg">
             </div>
             <div class="texto">
                 <p>
@@ -158,19 +189,26 @@ Impulsa la paz y el diálogo entre religiones y culturas, inspirando a construir
 
 </div>
 
-<script>
-document.addEventListener("DOMContentLoaded", function(){
-    console.log("Página Información cargada");
+<!-- BOTONES PAZ -->
+<div class="paz">
+    <button onclick="ir('index.html')">P</button>
+    <button onclick="ir('logros.html')">A</button>
+    <button onclick="ir('Biografia.html')">Z</button>
+</div>
 
-    const tarjetas = document.querySelectorAll(".tarjeta");
-    tarjetas.forEach(tarjeta => {
-        tarjeta.addEventListener("click", () => {
-            tarjeta.style.borderColor = "#4a90c2";
-        });
+<script>
+function ir(p){
+    window.location.href = p;
+}
+
+document.querySelectorAll(".tarjeta").forEach(t => {
+    t.addEventListener("click", () => {
+        t.style.borderColor = "#4a90c2";
     });
 });
 </script>
 
 </body>
 </html>
+
 
